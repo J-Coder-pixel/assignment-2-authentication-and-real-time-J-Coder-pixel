@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+    <body class="bg-light">
+        <div id="greeting" class="container text-center mt-3 fw-bold"></div>
+
+        <div class="container mt-4">
+            <div class="card p-4 shadow-sm">
+                <h2 class="text-center mb-3">Add Book/Song</h2>
+                <form id="addItem">
+                    <div class="mb-3">
+                        <label for="itemType" class="form-label">Item Type:</label>
+                        <select class="form-select" id="itemType" name="Type" required>
+                            <option value="Book">Book</option>
+                            <option value="Song">Song</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemName" class="form-label">Item Name:</label>
+                        <input type="text" class="form-control mb-3" id="itemName" name="Item" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemMaker" class="form-label">Item Creator:</label>
+                        <input type="text" class="form-control mb-3" id="itemMaker" name="Creator" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemYear" class="form-label">Release Year:</label>
+                        <input type="text" class="form-control mb-3" id="itemYear" name="Year" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Item</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="container mt-4">
+            <div class="card p-4 shadow-sm">
+                <h2 class="text-center mb-3">Delete Item</h2>
+                <form id="deleteItem">
+                    <div class="mb-3">
+                        <label for="deleteItemName" class="form-label">Item Name</label>
+                        <input type="text" class="form-control mb-3" id="deleteItemName" name="Item" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Delete Item</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="container mt-4">
+            <div class="card p-4 shadow-sm">
+                <h2 class="text-center mb-3">Items</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Creator</th>
+                            <th scope="col">Year</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items-table"></tbody>
+                </table>
+            </div>
+    </body>
+    <script src="profile.bundle.js"></script>
+</head>
